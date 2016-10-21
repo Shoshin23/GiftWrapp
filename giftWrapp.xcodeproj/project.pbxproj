@@ -14,7 +14,10 @@
 		3079FAA61D96CAE100805373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3079FAA41D96CAE100805373 /* LaunchScreen.storyboard */; };
 		3079FAB11D96CAE100805373 /* giftWrappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079FAB01D96CAE100805373 /* giftWrappTests.swift */; };
 		3079FABC1D96CAE100805373 /* giftWrappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079FABB1D96CAE100805373 /* giftWrappUITests.swift */; };
+		3083F0811DBA87E400D80AD1 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3083F0801DBA87E400D80AD1 /* MaterialButton.swift */; };
 		30BF1A241DB8D42C00BFBBFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30BF1A231DB8D42C00BFBBFC /* GoogleService-Info.plist */; };
+		30BF1A291DB9326C00BFBBFC /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BF1A281DB9326C00BFBBFC /* MaterialView.swift */; };
+		30BF1A2C1DB9DAF400BFBBFC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BF1A2B1DB9DAF400BFBBFC /* Constants.swift */; };
 		38AF2B4051545BFB29F99637 /* Pods_giftWrappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926E1BD26CAEFCE154A5FF29 /* Pods_giftWrappUITests.framework */; };
 		A30E126A8F100D64CF31161C /* Pods_giftWrappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9D55D067CBEFFAC13DE0D8 /* Pods_giftWrappTests.framework */; };
 		AC7EACB17E35ED714AA29357 /* Pods_giftWrapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2AEADA87ED186FE2EC610D4 /* Pods_giftWrapp.framework */; };
@@ -52,7 +55,10 @@
 		3079FAB71D96CAE100805373 /* giftWrappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = giftWrappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3079FABB1D96CAE100805373 /* giftWrappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = giftWrappUITests.swift; sourceTree = "<group>"; };
 		3079FABD1D96CAE100805373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3083F0801DBA87E400D80AD1 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		30BF1A231DB8D42C00BFBBFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30BF1A281DB9326C00BFBBFC /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		30BF1A2B1DB9DAF400BFBBFC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		54D8A9E21602642225C489DC /* Pods-giftWrappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftWrappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giftWrappUITests/Pods-giftWrappUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		863DC5097E4048BB06636C80 /* Pods-giftWrappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftWrappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-giftWrappTests/Pods-giftWrappTests.release.xcconfig"; sourceTree = "<group>"; };
 		86894F338B305B02338E6989 /* Pods-giftWrapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftWrapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-giftWrapp/Pods-giftWrapp.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 		3079FA9A1D96CAE100805373 /* giftWrapp */ = {
 			isa = PBXGroup;
 			children = (
+				30BF1A2A1DB9DAE500BFBBFC /* Util */,
 				30BF1A251DB8FC0C00BFBBFC /* Model */,
 				30BF1A271DB8FC2700BFBBFC /* Controller */,
 				30BF1A261DB8FC1100BFBBFC /* View */,
@@ -157,6 +164,8 @@
 		30BF1A261DB8FC1100BFBBFC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30BF1A281DB9326C00BFBBFC /* MaterialView.swift */,
+				3083F0801DBA87E400D80AD1 /* MaterialButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -167,6 +176,14 @@
 				3079FA9D1D96CAE100805373 /* SignInVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		30BF1A2A1DB9DAE500BFBBFC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				30BF1A2B1DB9DAF400BFBBFC /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		8F412D93928C14ED06417200 /* Frameworks */ = {
@@ -461,8 +478,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30BF1A291DB9326C00BFBBFC /* MaterialView.swift in Sources */,
 				3079FA9E1D96CAE100805373 /* SignInVC.swift in Sources */,
 				3079FA9C1D96CAE100805373 /* AppDelegate.swift in Sources */,
+				30BF1A2C1DB9DAF400BFBBFC /* Constants.swift in Sources */,
+				3083F0811DBA87E400D80AD1 /* MaterialButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
