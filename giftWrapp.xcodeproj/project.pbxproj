@@ -15,7 +15,11 @@
 		3079FAB11D96CAE100805373 /* giftWrappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079FAB01D96CAE100805373 /* giftWrappTests.swift */; };
 		3079FABC1D96CAE100805373 /* giftWrappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079FABB1D96CAE100805373 /* giftWrappUITests.swift */; };
 		3083F0811DBA87E400D80AD1 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3083F0801DBA87E400D80AD1 /* MaterialButton.swift */; };
-		30BF1A241DB8D42C00BFBBFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30BF1A231DB8D42C00BFBBFC /* GoogleService-Info.plist */; };
+		3083F0861DBA90EB00D80AD1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3083F0821DBA90EB00D80AD1 /* Bolts.framework */; };
+		3083F0871DBA90EB00D80AD1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3083F0831DBA90EB00D80AD1 /* FBSDKCoreKit.framework */; };
+		3083F0881DBA90EB00D80AD1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3083F0841DBA90EB00D80AD1 /* FBSDKLoginKit.framework */; };
+		3083F0891DBA90EB00D80AD1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3083F0851DBA90EB00D80AD1 /* FBSDKShareKit.framework */; };
+		3083F08C1DBABB2D00D80AD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3083F08B1DBABB2D00D80AD1 /* GoogleService-Info.plist */; };
 		30BF1A291DB9326C00BFBBFC /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BF1A281DB9326C00BFBBFC /* MaterialView.swift */; };
 		30BF1A2C1DB9DAF400BFBBFC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BF1A2B1DB9DAF400BFBBFC /* Constants.swift */; };
 		38AF2B4051545BFB29F99637 /* Pods_giftWrappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926E1BD26CAEFCE154A5FF29 /* Pods_giftWrappUITests.framework */; };
@@ -56,7 +60,12 @@
 		3079FABB1D96CAE100805373 /* giftWrappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = giftWrappUITests.swift; sourceTree = "<group>"; };
 		3079FABD1D96CAE100805373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3083F0801DBA87E400D80AD1 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
-		30BF1A231DB8D42C00BFBBFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3083F0821DBA90EB00D80AD1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		3083F0831DBA90EB00D80AD1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		3083F0841DBA90EB00D80AD1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		3083F0851DBA90EB00D80AD1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		3083F08A1DBAB31100D80AD1 /* giftWrapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = giftWrapp.entitlements; sourceTree = "<group>"; };
+		3083F08B1DBABB2D00D80AD1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		30BF1A281DB9326C00BFBBFC /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		30BF1A2B1DB9DAF400BFBBFC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		54D8A9E21602642225C489DC /* Pods-giftWrappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftWrappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giftWrappUITests/Pods-giftWrappUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +84,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC7EACB17E35ED714AA29357 /* Pods_giftWrapp.framework in Frameworks */,
+				3083F0871DBA90EB00D80AD1 /* FBSDKCoreKit.framework in Frameworks */,
+				3083F0891DBA90EB00D80AD1 /* FBSDKShareKit.framework in Frameworks */,
+				3083F0881DBA90EB00D80AD1 /* FBSDKLoginKit.framework in Frameworks */,
+				3083F0861DBA90EB00D80AD1 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +135,7 @@
 		3079FA9A1D96CAE100805373 /* giftWrapp */ = {
 			isa = PBXGroup;
 			children = (
+				3083F08A1DBAB31100D80AD1 /* giftWrapp.entitlements */,
 				30BF1A2A1DB9DAE500BFBBFC /* Util */,
 				30BF1A251DB8FC0C00BFBBFC /* Model */,
 				30BF1A271DB8FC2700BFBBFC /* Controller */,
@@ -131,7 +145,7 @@
 				3079FAA21D96CAE100805373 /* Assets.xcassets */,
 				3079FAA41D96CAE100805373 /* LaunchScreen.storyboard */,
 				3079FAA71D96CAE100805373 /* Info.plist */,
-				30BF1A231DB8D42C00BFBBFC /* GoogleService-Info.plist */,
+				3083F08B1DBABB2D00D80AD1 /* GoogleService-Info.plist */,
 			);
 			path = giftWrapp;
 			sourceTree = "<group>";
@@ -189,6 +203,10 @@
 		8F412D93928C14ED06417200 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3083F0821DBA90EB00D80AD1 /* Bolts.framework */,
+				3083F0831DBA90EB00D80AD1 /* FBSDKCoreKit.framework */,
+				3083F0841DBA90EB00D80AD1 /* FBSDKLoginKit.framework */,
+				3083F0851DBA90EB00D80AD1 /* FBSDKShareKit.framework */,
 				C2AEADA87ED186FE2EC610D4 /* Pods_giftWrapp.framework */,
 				0F9D55D067CBEFFAC13DE0D8 /* Pods_giftWrappTests.framework */,
 				926E1BD26CAEFCE154A5FF29 /* Pods_giftWrappUITests.framework */,
@@ -287,6 +305,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = P9S59S549S;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					3079FAAB1D96CAE100805373 = {
 						CreatedOnToolsVersion = 8.0;
@@ -328,7 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3079FAA61D96CAE100805373 /* LaunchScreen.storyboard in Resources */,
-				30BF1A241DB8D42C00BFBBFC /* GoogleService-Info.plist in Resources */,
+				3083F08C1DBABB2D00D80AD1 /* GoogleService-Info.plist in Resources */,
 				3079FAA31D96CAE100805373 /* Assets.xcassets in Resources */,
 				3079FAA11D96CAE100805373 /* Main.storyboard in Resources */,
 			);
@@ -635,7 +658,12 @@
 			baseConfigurationReference = A2F4825630E3827343499CE8 /* Pods-giftWrapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = giftWrapp/giftWrapp.entitlements;
 				DEVELOPMENT_TEAM = P9S59S549S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = giftWrapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotusbee.giftWrapp;
@@ -650,7 +678,12 @@
 			baseConfigurationReference = 86894F338B305B02338E6989 /* Pods-giftWrapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = giftWrapp/giftWrapp.entitlements;
 				DEVELOPMENT_TEAM = P9S59S549S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = giftWrapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotusbee.giftWrapp;
