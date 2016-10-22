@@ -10,12 +10,22 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,6 +62,10 @@ class SignInVC: UIViewController {
                 
             } else {
                 print("Successfully authenticated with Firebase")
+                if user != nil {
+                KeychainWrapper.standard.set((user?.uid)!, forKey: KEY_UID)
+                self.performSegue(withIdentifier: "goToFeed", sender: nil)
+                }
             }
         })
     }

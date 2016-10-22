@@ -20,6 +20,7 @@
 		3083F0881DBA90EB00D80AD1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3083F0841DBA90EB00D80AD1 /* FBSDKLoginKit.framework */; };
 		3083F0891DBA90EB00D80AD1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3083F0851DBA90EB00D80AD1 /* FBSDKShareKit.framework */; };
 		3083F08C1DBABB2D00D80AD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3083F08B1DBABB2D00D80AD1 /* GoogleService-Info.plist */; };
+		3083F08E1DBB416B00D80AD1 /* FeedVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3083F08D1DBB416B00D80AD1 /* FeedVCViewController.swift */; };
 		30BF1A291DB9326C00BFBBFC /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BF1A281DB9326C00BFBBFC /* MaterialView.swift */; };
 		30BF1A2C1DB9DAF400BFBBFC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BF1A2B1DB9DAF400BFBBFC /* Constants.swift */; };
 		38AF2B4051545BFB29F99637 /* Pods_giftWrappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926E1BD26CAEFCE154A5FF29 /* Pods_giftWrappUITests.framework */; };
@@ -66,6 +67,7 @@
 		3083F0851DBA90EB00D80AD1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		3083F08A1DBAB31100D80AD1 /* giftWrapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = giftWrapp.entitlements; sourceTree = "<group>"; };
 		3083F08B1DBABB2D00D80AD1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3083F08D1DBB416B00D80AD1 /* FeedVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVCViewController.swift; sourceTree = "<group>"; };
 		30BF1A281DB9326C00BFBBFC /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		30BF1A2B1DB9DAF400BFBBFC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		54D8A9E21602642225C489DC /* Pods-giftWrappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftWrappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giftWrappUITests/Pods-giftWrappUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				3079FA9D1D96CAE100805373 /* SignInVC.swift */,
+				3083F08D1DBB416B00D80AD1 /* FeedVCViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 					3079FA971D96CAE100805373 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = P9S59S549S;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -314,12 +318,14 @@
 					3079FAAB1D96CAE100805373 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = P9S59S549S;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3079FA971D96CAE100805373;
 					};
 					3079FAB61D96CAE100805373 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = P9S59S549S;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3079FA971D96CAE100805373;
 					};
@@ -502,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30BF1A291DB9326C00BFBBFC /* MaterialView.swift in Sources */,
+				3083F08E1DBB416B00D80AD1 /* FeedVCViewController.swift in Sources */,
 				3079FA9E1D96CAE100805373 /* SignInVC.swift in Sources */,
 				3079FA9C1D96CAE100805373 /* AppDelegate.swift in Sources */,
 				30BF1A2C1DB9DAF400BFBBFC /* Constants.swift in Sources */,
