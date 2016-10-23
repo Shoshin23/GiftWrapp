@@ -63,8 +63,11 @@ class SignInVC: UIViewController {
             } else {
                 print("Successfully authenticated with Firebase")
                 if user != nil {
+                    let userData = ["provider":user?.providerID,"email":user?.email,"profileImg":String(describing: user?.photoURL)]
+                    DataService.ds.createFirebaseDBUser(uid: (user?.uid)!, userData:userData as! Dictionary<String, String>)
                 KeychainWrapper.standard.set((user?.uid)!, forKey: KEY_UID)
                 self.performSegue(withIdentifier: "goToFeed", sender: nil)
+                
                 }
             }
         })

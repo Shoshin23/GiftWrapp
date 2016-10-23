@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		302DCDBF1DBBC5D500B611BA /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302DCDBE1DBBC5D500B611BA /* PostCell.swift */; };
+		302DCDC21DBBDA6700B611BA /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302DCDC11DBBDA6700B611BA /* DataServices.swift */; };
 		3079FA9C1D96CAE100805373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079FA9B1D96CAE100805373 /* AppDelegate.swift */; };
 		3079FA9E1D96CAE100805373 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079FA9D1D96CAE100805373 /* SignInVC.swift */; };
 		3079FAA11D96CAE100805373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3079FA9F1D96CAE100805373 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		0F9D55D067CBEFFAC13DE0D8 /* Pods_giftWrappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_giftWrappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		302DCDBE1DBBC5D500B611BA /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		302DCDC11DBBDA6700B611BA /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		3079FA981D96CAE100805373 /* giftWrapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = giftWrapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3079FA9B1D96CAE100805373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3079FA9D1D96CAE100805373 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		302DCDC01DBBDA2000B611BA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				302DCDC11DBBDA6700B611BA /* DataServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		3079FA8F1D96CAE100805373 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +149,7 @@
 		3079FA9A1D96CAE100805373 /* giftWrapp */ = {
 			isa = PBXGroup;
 			children = (
+				302DCDC01DBBDA2000B611BA /* Services */,
 				3083F08A1DBAB31100D80AD1 /* giftWrapp.entitlements */,
 				30BF1A2A1DB9DAE500BFBBFC /* Util */,
 				30BF1A251DB8FC0C00BFBBFC /* Model */,
@@ -513,6 +524,7 @@
 				302DCDBF1DBBC5D500B611BA /* PostCell.swift in Sources */,
 				30BF1A291DB9326C00BFBBFC /* MaterialView.swift in Sources */,
 				3083F08E1DBB416B00D80AD1 /* FeedVCViewController.swift in Sources */,
+				302DCDC21DBBDA6700B611BA /* DataServices.swift in Sources */,
 				3079FA9E1D96CAE100805373 /* SignInVC.swift in Sources */,
 				3079FA9C1D96CAE100805373 /* AppDelegate.swift in Sources */,
 				30BF1A2C1DB9DAF400BFBBFC /* Constants.swift in Sources */,

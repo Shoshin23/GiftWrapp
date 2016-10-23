@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Screen (2x)" translatesAutoresizingMaskIntoConstraints="NO" id="LGt-1a-rYE"/>
@@ -60,7 +60,7 @@
                         <viewControllerLayoutGuide type="bottom" id="yVw-v3-e3U"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zVq-AJ-t2j">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCq-wL-uVc">
@@ -72,10 +72,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="352" id="Nmg-Y6-cmp" customClass="PostCell" customModule="giftWrapp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="382" height="352"/>
+                                        <rect key="frame" x="0.0" y="28" width="343" height="352"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nmg-Y6-cmp" id="Vy7-tD-hQG">
-                                            <frame key="frameInset" width="382" height="352"/>
+                                            <frame key="frameInset" width="343" height="352"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pa2-RX-4fk" customClass="MaterialView" customModule="giftWrapp" customModuleProvider="target">
@@ -191,14 +191,24 @@
                                     <outlet property="delegate" destination="aT5-ji-Ytz" id="aoB-4W-G1I"/>
                                 </connections>
                             </tableView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQD-t9-Tp9">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="Ozr-JS-DQW"/>
+                                    <tabBarItem systemItem="more" id="Yjd-j2-bd0"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sCq-wL-uVc" firstAttribute="trailing" secondItem="zVq-AJ-t2j" secondAttribute="trailingMargin" id="1Cn-gc-rdp"/>
-                            <constraint firstItem="yVw-v3-e3U" firstAttribute="top" secondItem="XDJ-NU-E1V" secondAttribute="bottom" id="BR9-s0-CEA"/>
+                            <constraint firstItem="yVw-v3-e3U" firstAttribute="top" secondItem="XDJ-NU-E1V" secondAttribute="bottom" constant="49" id="BR9-s0-CEA"/>
                             <constraint firstAttribute="trailing" secondItem="XDJ-NU-E1V" secondAttribute="trailing" constant="16" id="Jap-HZ-2Oe"/>
                             <constraint firstItem="XDJ-NU-E1V" firstAttribute="top" secondItem="sCq-wL-uVc" secondAttribute="bottom" constant="8.5" id="USb-Ud-beo"/>
                             <constraint firstItem="XDJ-NU-E1V" firstAttribute="leading" secondItem="zVq-AJ-t2j" secondAttribute="leading" constant="16" id="WNn-pk-8wq"/>
+                            <constraint firstItem="qQD-t9-Tp9" firstAttribute="top" secondItem="XDJ-NU-E1V" secondAttribute="bottom" id="Wnw-Hi-LB0"/>
+                            <constraint firstItem="qQD-t9-Tp9" firstAttribute="centerX" secondItem="XDJ-NU-E1V" secondAttribute="centerX" id="c5i-0s-Vs6"/>
+                            <constraint firstItem="qQD-t9-Tp9" firstAttribute="leading" secondItem="zVq-AJ-t2j" secondAttribute="leading" id="gTT-lq-8Ba"/>
                             <constraint firstItem="sCq-wL-uVc" firstAttribute="top" secondItem="XNw-Yt-aDH" secondAttribute="bottom" id="nGW-ex-foo"/>
                             <constraint firstItem="sCq-wL-uVc" firstAttribute="leading" secondItem="zVq-AJ-t2j" secondAttribute="leadingMargin" id="zFA-ol-rMf"/>
                         </constraints>
@@ -209,11 +219,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="31T-33-WM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965.60000000000002" y="136.28185907046478"/>
+            <point key="canvasLocation" x="964" y="135.38230884557723"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Launch Screen (2x)" width="414" height="736"/>
+        <image name="Launch Screen (2x)" width="621" height="1104"/>
         <image name="avatar" width="236" height="236"/>
         <image name="landscape" width="236" height="355"/>
         <image name="reaction" width="700" height="700"/>
