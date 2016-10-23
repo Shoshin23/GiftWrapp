@@ -15,6 +15,10 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var giftDescription: UILabel!
     @IBOutlet weak var giftImg: UIImageView!
+    @IBOutlet weak var likesLbl: UILabel!
+    
+    var post:Post!
+    
     
     
     override func awakeFromNib() {
@@ -30,6 +34,14 @@ class PostCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureCell(post:Post) {
+        self.post = post
+        self.giftDescription.text = post.description
+        self.likesLbl.text = "\(post.likes)"
+        self.giftImg.image = UIImage(named: post.giftImg)
+        
     }
 
 }

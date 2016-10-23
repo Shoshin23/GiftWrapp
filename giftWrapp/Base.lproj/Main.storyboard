@@ -109,14 +109,6 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsS-ch-xGF">
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="81" id="qTo-vg-gaU"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgE-Wz-cfs">
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="15" id="qcc-LK-DXh"/>
@@ -141,6 +133,14 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsS-ch-xGF">
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="81" id="qTo-vg-gaU"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -151,7 +151,7 @@
                                                         <constraint firstItem="7jD-K5-ZGn" firstAttribute="leading" secondItem="NOT-cx-T1y" secondAttribute="leading" id="K3u-ZH-GEk"/>
                                                         <constraint firstAttribute="bottom" secondItem="wZy-ud-K6a" secondAttribute="bottom" constant="69" id="PK0-qB-U6C"/>
                                                         <constraint firstAttribute="bottom" secondItem="QZw-Kf-jc4" secondAttribute="bottom" constant="11" id="Suv-II-vQa"/>
-                                                        <constraint firstItem="YsS-ch-xGF" firstAttribute="leading" secondItem="Pa2-RX-4fk" secondAttribute="leading" constant="22" id="URj-kV-sIW"/>
+                                                        <constraint firstItem="YsS-ch-xGF" firstAttribute="leading" secondItem="Pa2-RX-4fk" secondAttribute="leading" constant="29" id="URj-kV-sIW"/>
                                                         <constraint firstItem="ghG-rT-8su" firstAttribute="top" secondItem="Pa2-RX-4fk" secondAttribute="top" id="Ue2-6c-if9"/>
                                                         <constraint firstItem="NOT-cx-T1y" firstAttribute="leading" secondItem="ghG-rT-8su" secondAttribute="trailing" constant="8" symbolic="YES" id="W6I-Qo-nEi"/>
                                                         <constraint firstItem="NgE-Wz-cfs" firstAttribute="baseline" secondItem="eE4-KQ-Vvm" secondAttribute="baseline" id="ZJD-as-vbZ"/>
@@ -181,6 +181,7 @@
                                         <connections>
                                             <outlet property="giftDescription" destination="7jD-K5-ZGn" id="PRf-K6-NEG"/>
                                             <outlet property="giftImg" destination="wZy-ud-K6a" id="vnZ-lD-wXA"/>
+                                            <outlet property="likesLbl" destination="NgE-Wz-cfs" id="NGt-8c-FaP"/>
                                             <outlet property="profileImg" destination="ghG-rT-8su" id="7ju-PH-fCj"/>
                                             <outlet property="userName" destination="NOT-cx-T1y" id="ftM-K8-f9T"/>
                                         </connections>
