@@ -21,6 +21,9 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
     
     @IBOutlet weak var nextButton: SpringButton!
     
+    @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
+
+    
     var imageSelected:Bool!
     
     
@@ -49,16 +52,42 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
         
     //    nextButton.addGestureRecognizer(twoFingerTap)
         
-        
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+
         
     }
+    
+//    deinit {
+//        NotificationCenter.default.removeObserver(self)
+//    }
+//    
+//    func keyboardNotification(notification: NSNotification) {
+//        if let userInfo = notification.userInfo {
+//            let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+//            let duration:TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+//            let animationCurveRawNSN = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber
+//            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIViewAnimationOptions.curveEaseInOut.rawValue
+//            let animationCurve:UIViewAnimationOptions = UIViewAnimationOptions(rawValue: animationCurveRaw)
+//            if (endFrame?.origin.y)! >= UIScreen.main.bounds.size.height {
+//                self.keyboardHeightLayoutConstraint?.constant = 0.0
+//            } else {
+//                self.keyboardHeightLayoutConstraint?.constant = endFrame?.size.height ?? 0.0
+//            }
+//            UIView.animate(withDuration: duration,
+//                           delay: TimeInterval(0),
+//                           options: animationCurve,
+//                           animations: { self.view.layoutIfNeeded() },
+//                           completion: nil)
+//        }
+//    }
+
     
    
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         delayWithSeconds(1) {
        self.nextButton.isHidden = false
-        self.nextButton.animation = "fadeIn"
+        self.nextButton.animation = "easeIn"
         self.nextButton.curve = "linear"
         self.nextButton.duration = 2.0
         self.nextButton.animate()
@@ -68,6 +97,8 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
     
     @IBAction func nextButtonTapped(_ sender: SpringButton) {
         //save occassion locally. 
+        
+        if questionsLabel.text! == "A brief description about the gift?" {
         
         guard let giftDesc = giftDescription.text , giftDesc != " " else {
             print("You need to enter a description")
@@ -93,22 +124,19 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
                 }
             }
         }
+        } else if questionsLabel.text! == "So, what's the occasion?" {
         
         
+        //let giftOccassion = giftDescription.text
+        giftDescription.text = " "
         
-        let giftOccassion = giftDescription.text
-       // giftDescription.text = " "
-        
-       // questionsLabel.text = "A brief description about the gift?"
-       // questionsLabel.animation = "slideRight"
-        //questionsLabel.curve = "linear"
-        //questionsLabel.duration = 1.2
-        //questionsLabel.animate()
-        //giftDescription.becomeFirstResponder()
-        
-        //Getting the storage Part right. 
-        
-        
+        questionsLabel.text = "A brief description about the gift?"
+        questionsLabel.animation = "slideRight"
+        questionsLabel.curve = "linear"
+        questionsLabel.duration = 1.2
+        questionsLabel.animate()
+        giftDescription.becomeFirstResponder()
+        }
 
     }
     

@@ -54,7 +54,7 @@ class FeedVCViewController: UIViewController, UITableViewDelegate,UITableViewDat
         
 
         
-        setTableViewBackgroundGradient(sender: self.tableView,UIColor.init(hexString: "#84C1FF")!,UIColor.init(hexString: "#FF7B45")!)
+        setTableViewBackgroundGradient(sender: self.tableView,UIColor.init(hexString: "#000000")!,UIColor.init(hexString: "#686868")!)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -260,7 +260,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDi-KI-1JT" customClass="SpringImageView" customModule="Spring">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDi-KI-1JT" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="339"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xnt-t7-suf">
@@ -305,12 +305,12 @@
                         <constraints>
                             <constraint firstItem="hDi-KI-1JT" firstAttribute="trailing" secondItem="HwU-Zg-tMy" secondAttribute="trailing" constant="20" id="5a6-Bh-Vjr"/>
                             <constraint firstItem="hDi-KI-1JT" firstAttribute="top" secondItem="ACo-cm-tYE" secondAttribute="top" id="CZG-49-y2Q"/>
-                            <constraint firstItem="xGO-F7-UG2" firstAttribute="top" secondItem="Xnt-t7-suf" secondAttribute="bottom" constant="152" id="Gfw-pe-86g"/>
+                            <constraint firstItem="xGO-F7-UG2" firstAttribute="top" secondItem="Xnt-t7-suf" secondAttribute="bottom" constant="152" id="Gfw-pe-86g" customClass="KeyboardLayoutConstraint" customModule="Spring"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zcb-wM-9wk" secondAttribute="trailing" constant="46" id="H3d-YZ-4ax"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hDi-KI-1JT" secondAttribute="trailing" constant="-20" id="Q7o-2S-QJl"/>
                             <constraint firstItem="Zcb-wM-9wk" firstAttribute="top" secondItem="hDi-KI-1JT" secondAttribute="bottom" constant="-163" id="gbO-H9-tqL"/>
-                            <constraint firstItem="xGO-F7-UG2" firstAttribute="top" secondItem="HwU-Zg-tMy" secondAttribute="bottom" constant="197" id="j22-yP-dJ0"/>
-                            <constraint firstItem="xGO-F7-UG2" firstAttribute="top" secondItem="Zcb-wM-9wk" secondAttribute="bottom" constant="270" id="oJ2-oU-d0D"/>
+                            <constraint firstItem="xGO-F7-UG2" firstAttribute="top" secondItem="HwU-Zg-tMy" secondAttribute="bottom" constant="197" id="j22-yP-dJ0" customClass="KeyboardLayoutConstraint" customModule="Spring"/>
+                            <constraint firstItem="xGO-F7-UG2" firstAttribute="top" secondItem="Zcb-wM-9wk" secondAttribute="bottom" constant="270" id="oJ2-oU-d0D" customClass="KeyboardLayoutConstraint" customModule="Spring"/>
                             <constraint firstItem="hDi-KI-1JT" firstAttribute="leading" secondItem="Zcb-wM-9wk" secondAttribute="leading" constant="-20" id="ouB-ae-8QR"/>
                             <constraint firstItem="hDi-KI-1JT" firstAttribute="leading" secondItem="ACo-cm-tYE" secondAttribute="leadingMargin" constant="-20" id="siu-5N-E41"/>
                             <constraint firstItem="HwU-Zg-tMy" firstAttribute="trailing" secondItem="Xnt-t7-suf" secondAttribute="trailing" constant="20" id="vjh-GF-5Up"/>
