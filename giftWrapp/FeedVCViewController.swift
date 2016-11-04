@@ -18,6 +18,16 @@ class FeedVCViewController: UIViewController, UITableViewDelegate,UITableViewDat
     var posts = [Post]()
     static var imageCache: NSCache<NSString,UIImage> = NSCache()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        //reload table. 
+        print("this worked!")
+      //  self.tableView.reloadData()
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: self.view.frame, andColors: [UIColor.init(hexString: "#000000")!,UIColor.init(hexString: "#686868")!])
@@ -27,6 +37,7 @@ class FeedVCViewController: UIViewController, UITableViewDelegate,UITableViewDat
         tableView.dataSource = self
         
         DataService.ds.REF_POSTS.observe(.value, with:{ (snapshot) in
+            self.posts = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
                     print("SNAP:\(snap)")
@@ -34,6 +45,7 @@ class FeedVCViewController: UIViewController, UITableViewDelegate,UITableViewDat
                         let key = snap.key
                         let post =  Post(postKey: key, postData: postDict)
                         self.posts.append(post)
+                        print(self.posts)
                     }
                 }
             }
@@ -50,6 +62,7 @@ class FeedVCViewController: UIViewController, UITableViewDelegate,UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(posts.count)
         return posts.count
     }
     
@@ -61,15 +74,19 @@ class FeedVCViewController: UIViewController, UITableViewDelegate,UITableViewDat
         
         if let img = FeedVCViewController.imageCache.object(forKey: post.giftImg as NSString) {
             cell.configureCell(post: post,img:img)
+            print("Posting \(cell.giftDescription)")
             return cell
         }
         else {
             cell.configureCell(post: post,img:nil)
+            print("Posting \(cell.giftDescription)")
             return cell
+
         }
        }
        else {
         return PostCell()
+
         }
     }
 

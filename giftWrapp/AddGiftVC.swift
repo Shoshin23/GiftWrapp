@@ -10,6 +10,7 @@ import UIKit
 import ChameleonFramework
 import ImagePicker
 import Spring
+import Firebase
 
 class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
 
@@ -20,7 +21,7 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
     
     @IBOutlet weak var nextButton: SpringButton!
     
-    
+    var imageSelected:Bool!
     
     
     override func viewDidLoad() {
@@ -67,8 +68,36 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
     
     @IBAction func nextButtonTapped(_ sender: SpringButton) {
         //save occassion locally. 
+        
+        guard let giftDesc = giftDescription.text , giftDesc != " " else {
+            print("You need to enter a description")
+            return
+        }
+        guard let img = selectedImageView.image, imageSelected == true else {
+            print("An image must be selected.")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            let imgUID = NSUUID().uuidString
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpeg"
+            DataService.ds.REF_POST_IMAGES.child(imgUID).put(imgData, metadata: metaData) {(metadata,error) in
+                if error != nil {
+                    print("Unable to upload an image.")
+                    
+                } else {
+                    print("Successfully uploaded the image. ")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    self.postToFirebase(imgUrl: downloadURL!)
+                }
+            }
+        }
+        
+        
+        
         let giftOccassion = giftDescription.text
-        giftDescription.text = " "
+       // giftDescription.text = " "
         
        // questionsLabel.text = "A brief description about the gift?"
        // questionsLabel.animation = "slideRight"
@@ -83,9 +112,27 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
 
     }
     
+    func postToFirebase(imgUrl:String) {
+        let post :  Dictionary<String, AnyObject> = [
+            "description" : giftDescription.text! as AnyObject,
+            "giftImg":imgUrl as AnyObject,
+            "likes": 0 as AnyObject
+            
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        giftDescription.text! = " "
+        imageSelected = false
+        
+
+        
+    }
     
     func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
         imagePicker.dismiss(animated: true, completion: nil)
+        imageSelected = false
     }
     
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
@@ -94,6 +141,8 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
     
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         imagePicker.dismiss(animated: true, completion: nil)
+        
+        imageSelected = true
         
         //show the next set of questions here. 
         
