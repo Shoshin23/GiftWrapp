@@ -19,12 +19,16 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
     @IBOutlet weak var giftDescription: UITextField!
     
     @IBOutlet weak var nextButton: SpringButton!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: self.view.frame, andColors: [UIColor.init(hexString: "#84C1FF")!,UIColor.init(hexString: "#FF7B45")!])
-        questionsLabel.text = "So, let's start with a photo..."
+        questionsLabel.text = "First, let's start with a photo..."
         delayWithSeconds(2) {
             let imagePicker = ImagePickerController()
             imagePicker.delegate = self
@@ -37,22 +41,46 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
         // selectedImageView.isHidden = true
         giftDescription.delegate = self
         
+        
+        
+      //  let twoFingerTap = UITapGestureRecognizer(target: self, action: #selector(self.twoFingerTapDetected(_:)))
+    //    twoFingerTap.numberOfTouchesRequired = 1
+        
+    //    nextButton.addGestureRecognizer(twoFingerTap)
+        
+        
+        
     }
     
+   
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        nextButton.isHidden = false
-        nextButton.animation = "fadeIn"
-        nextButton.curve = "linear"
-        nextButton.duration = 1.0
-        nextButton.animate()
+        delayWithSeconds(1) {
+       self.nextButton.isHidden = false
+        self.nextButton.animation = "fadeIn"
+        self.nextButton.curve = "linear"
+        self.nextButton.duration = 2.0
+        self.nextButton.animate()
+        }
     }
     
     
     @IBAction func nextButtonTapped(_ sender: SpringButton) {
-//        questionsLabel.animation = "slideRight"
-//        questionsLabel.curve = "linear"
-//        questionsLabel.duration = 1.2
-//        questionsLabel.animate()
+        //save occassion locally. 
+        let giftOccassion = giftDescription.text
+        giftDescription.text = " "
+        
+       // questionsLabel.text = "A brief description about the gift?"
+       // questionsLabel.animation = "slideRight"
+        //questionsLabel.curve = "linear"
+        //questionsLabel.duration = 1.2
+        //questionsLabel.animate()
+        //giftDescription.becomeFirstResponder()
+        
+        //Getting the storage Part right. 
+        
+        
+
     }
     
     
@@ -80,6 +108,9 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
             self.questionsLabel.curve = "linear"
             self.questionsLabel.duration = 1.2
             self.questionsLabel.animate()
+            self.delayWithSeconds(1){
+            self.giftDescription.becomeFirstResponder() //shift focus to the textfield.
+            }
         }
         
         delayWithSeconds(1) {

@@ -9,13 +9,14 @@
 import UIKit
 import ChameleonFramework
 import Firebase
+import SwiftKeychainWrapper
 
 class FeedVCViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
-    
+    static var imageCache: NSCache<NSString,UIImage> = NSCache()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,9 +58,16 @@ class FeedVCViewController: UIViewController, UITableViewDelegate,UITableViewDat
         let post = posts[indexPath.row]
         
        if  let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-            cell.configureCell(post: post)
+        
+        if let img = FeedVCViewController.imageCache.object(forKey: post.giftImg as NSString) {
+            cell.configureCell(post: post,img:img)
             return cell
         }
+        else {
+            cell.configureCell(post: post,img:nil)
+            return cell
+        }
+       }
        else {
         return PostCell()
         }

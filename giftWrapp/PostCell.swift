@@ -8,6 +8,7 @@
 
 import UIKit
 import ChameleonFramework
+import Firebase
 
 class PostCell: UITableViewCell {
 
@@ -36,11 +37,35 @@ class PostCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(post:Post) {
+    func configureCell(post:Post, img:UIImage?) {
         self.post = post
         self.giftDescription.text = post.description
         self.likesLbl.text = "\(post.likes)"
         self.giftImg.image = UIImage(named: post.giftImg)
+        
+        if img != nil {
+            self.giftImg.image = img
+        } else {
+                let ref = FIRStorage.storage().reference(forURL: post.giftImg)
+            ref.data(withMaxSize: 5 * 1024 * 1024, completion: { (data,error) in
+                if error != nil {
+                    print(error)
+                    print("unable to donwload image from Firebase Storage.")
+                    
+                } else {
+                    print("Image downloaded from Firebase Storage.")
+                    
+                    if data != nil {
+                        if let img = UIImage(data: data!) {
+                            self.giftImg.image = img
+                            FeedVCViewController.imageCache.setObject(img, forKey: post.giftImg as NSString)
+                            
+                        }
+                    }
+                }
+            })
+            
+        }
         
     }
 

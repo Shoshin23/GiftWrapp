@@ -263,7 +263,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDi-KI-1JT" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="339"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TEXT" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xnt-t7-suf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xnt-t7-suf">
                                 <rect key="frame" x="16" y="429" width="323" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="LJg-RH-9U8"/>
