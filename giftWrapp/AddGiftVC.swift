@@ -73,12 +73,6 @@ class AddGiftVC: UIViewController,ImagePickerDelegate,UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         delayWithSeconds(1) {
-//       self.nextButton.isHidden = false
-//        self.nextButton.animation = "easeIn"
-//        self.nextButton.curve = "linear"
-//        self.nextButton.duration = 2.0
-//        self.nextButton.animate()
-            
             self.animateUIButton(self.nextButton, isHidden: false, animation: "fadeIn", curve: "linear", duration: 2.0)
         }
     }
